@@ -20,7 +20,6 @@
 </div>
 <div class="card">
 	<div class="card-header">
-
 		<div class="col-md-8">
 			<h4 class="card-title">
 				Edit Division
@@ -31,16 +30,11 @@
 				Go Back
 			</a>
 		</div>
-
-
 	</div>
-
 	<div class="card-body">
 		<form asp-action="Edit" class="pt_upld_page_frm">
-			<div class="row">
-				
+			<div class="row">				
 				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
 				<div class="col-md-4">
 					<div class="form-group">
 						<input name="DivisionId" value="@Model.DivisionId" type="hidden" />
@@ -73,7 +67,6 @@
 						<span asp-validation-for="DivisionCode" class="text-danger"></span>
 					</div>
 				</div>
-
 				<div class="col-md-4 mt-4">
 					<div class="form-group form-check">
 						<label class="form-check-label">
@@ -85,7 +78,6 @@
 			</div>
 			<hr />
 			<div class="row">
-
 				<div class="col-md-4">
 					<div class="form-group">
 
