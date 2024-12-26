@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\welcome\.nuget\packages\microsoft.net.compilers\1.0.0\build\..\tools\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DTEPortal.BusinessLayer\DTEPortal.BusinessLayer.csproj" />
+    <ProjectReference Include="..\DTEPortal.Data\DTEPortal.Data.csproj" />
+    <ProjectReference Include="..\DTEPortal.Entities\DTEPortal.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

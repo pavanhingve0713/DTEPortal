@@ -1,0 +1,72 @@
+﻿@model IEnumerable<DTEPortal.Entities.ViewModels.MstStateViewModel>
+@{
+    ViewData["Title"] = "State Master";
+    Layout = "~/Views/Shared/_MainMaster.cshtml";
+}
+<div class="row page-titles mx-0">
+    <div class="col-sm-6 p-md-0">
+        <div class="welcome-text">
+            <h4>State Master</h4>
+        </div>
+    </div>
+    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Master</a></li>
+            <li class="breadcrumb-item"><a href="#">Location Master</a></li>
+            <li class="breadcrumb-item active"><a href="#">State Master</a></li>
+        </ol>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <div class="col-md-8">
+            <h4 class="card-title">
+                State Master
+            </h4>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-action="Create" class="btn btn-primary shadow sharp me-1">
+                Add State
+            </a>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="dataTable display responsive nowrap w-100">
+			<thead>
+				<tr>
+					<th>Sr. No.</th>
+					<th>State Name (English)</th>
+					<th>State Name (Hindi)</th>
+					<th>State Code No.</th>
+					<th>Status</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var state in Model.Select((value, index) => new { value, index }))
+				{
+					<tr>
+						<td>@(state.index + 1)</td>
+						<td>@state.value.StateNameEng</td>
+						<td>@state.value.StateNameHin</td>
+						<td>@state.value.StateCode</td>
+						<td>
+							@if (state.value.IsActive)
+							{
+								<span class="badge bg-success">Active</span>
+							}
+							else
+							{
+								<span class="badge bg-danger">Inactive</span>
+							}
+						</td>
+						<td>
+							<a href="@Url.Action("Edit", "StateMaster", new { id = state.value.StateId })" class="btn btn-outline-primary"><i class="fa fa-pencil-alt"></i></a>
+							<button type="submit" class="btn btn-outline-danger" onclick="myCustomDelete(@state.value.StateId)"><i class="fa fa-trash"></i></button>
+						</td>
+					</tr>
+				}
+			</tbody>
+        </table>
+    </div>
+</div>

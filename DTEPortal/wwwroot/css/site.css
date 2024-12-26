@@ -1,0 +1,58 @@
+/* Make sure the body and html take full height */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Make the image section cover 50% and stretch to full height */
+.col-md-6 {
+    padding: 0;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+    .login-form-container h2 {
+        font-size: 2rem;
+        color: #333;
+    }
+
+.form-control {
+    border-radius: 5px;
+    height: 45px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 12px;
+}
+
+/* Responsive Image */
+img.object-cover {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 767px) {
+    .col-md-6 {
+        flex: 1 100%; /* Full width for smaller screens */
+    }
+
+    .login-form-container {
+        max-width: 100%;
+    }
+}

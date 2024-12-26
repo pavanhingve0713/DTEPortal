@@ -1,0 +1,103 @@
+﻿@model DTEPortal.Entities.Modals.MstDivision
+@{
+	ViewData["Title"] = "State Master";
+	Layout = "~/Views/Shared/_MainMaster.cshtml";
+}
+
+<div class="row page-titles mx-0">
+	<div class="col-sm-6 p-md-0">
+		<div class="welcome-text">
+			<h4>Division Master</h4>
+		</div>
+	</div>
+	<div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Master</a></li>
+			<li class="breadcrumb-item"><a href="#">Location Master</a></li>
+			<li class="breadcrumb-item active"><a href="#">Division Master</a></li>
+		</ol>
+	</div>
+</div>
+<div class="card">
+	<div class="card-header">
+
+		<div class="col-md-8">
+			<h4 class="card-title">
+				Edit Division
+			</h4>
+		</div>
+		<div class="col-md-4 text-end">
+			<a asp-action="Index" class="btn btn-primary shadow sharp me-1">
+				Go Back
+			</a>
+		</div>
+
+
+	</div>
+
+	<div class="card-body">
+		<form asp-action="Edit" class="pt_upld_page_frm">
+			<div class="row">
+				
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+				<div class="col-md-4">
+					<div class="form-group">
+						<input name="DivisionId" value="@Model.DivisionId" type="hidden" />
+						<label asp-for="StateId" class="control-label"></label>
+						<select asp-for="StateId" class="form-control"
+								asp-items="@(new SelectList(@ViewBag.mstStateList,"StateId", "StateNameEng"))">
+							<option value="">Select</option>
+						</select>
+						<span asp-validation-for="StateId" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label asp-for="DivisionNameEng" class="control-label"></label>
+						<input asp-for="DivisionNameEng" class="form-control" />
+						<span asp-validation-for="DivisionNameEng" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label asp-for="DivisionNameHin" class="control-label"></label>
+						<input asp-for="DivisionNameHin" class="form-control" />
+						<span asp-validation-for="DivisionNameHin" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label asp-for="DivisionCode" class="control-label"></label>
+						<input asp-for="DivisionCode" class="form-control" autocomplete="off" maxlength="2" />
+						<span asp-validation-for="DivisionCode" class="text-danger"></span>
+					</div>
+				</div>
+
+				<div class="col-md-4 mt-4">
+					<div class="form-group form-check">
+						<label class="form-check-label">
+							<input class="form-check-input" asp-for="IsActive" /> @Html.DisplayNameFor(model => model.IsActive)
+						</label>
+					</div>
+				</div>
+
+			</div>
+			<hr />
+			<div class="row">
+
+				<div class="col-md-4">
+					<div class="form-group">
+
+						<input type="submit" value="Update" id="submit-update-btn" class="btn btn-outline-success shadow btn-rounded Save-Confirmation" />
+
+					</div>
+				</div>
+			</div>
+		</form>
+
+
+
+	</div>
+</div>
+

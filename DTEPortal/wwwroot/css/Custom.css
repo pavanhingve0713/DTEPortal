@@ -1,0 +1,80 @@
+﻿table.dataTable {
+    color: var(--text-dark);
+}
+
+.footer .copyright p {
+    color: var(--text-dark);
+}
+
+.dlabnav .metismenu > li > a {
+    color: var(--text-dark);
+}
+
+.dlabnav .metismenu a {
+    color: var(--text-dark);
+}
+
+.copyright strong {
+    color: var(--text-dark);
+}
+
+.input-group-text {
+    color: var(--text-dark);
+}
+
+.dtp table.dtp-picker-days tr > th {
+    color: var(--text-dark);
+}
+
+.ck.ck-editor .ck.ck-button {
+    color: var(--text-dark);
+}
+
+.dropdown-menu .dropdown-item {
+    color: var(--text-dark);
+}
+
+.pagination .page-item .page-link {
+    color: var(--text-dark);
+}
+
+.clockpicker-popover .popover-title {
+    color: var(--text-dark);
+}
+
+.copyright {
+    color: var(--text-dark);
+}
+
+.dlabnav .metismenu > li > a i {
+    color: var(--text-dark);
+}
+
+.nav-label {
+    color: var(--text-dark);
+}
+
+.page-titles .breadcrumb li a {
+    color: var(--text-dark);
+}
+
+.notification_dropdown .dropdown-menu-right .media p {
+    color: var(--text-dark);
+}
+
+.nav-header .brand-logo img.brand-title {
+    filter: none
+}
+
+[data-nav-headerbg="color_13"][data-theme-version="dark"] .nav-header .brand-logo img.brand-title, 
+[data-nav-headerbg="color_13"] .nav-header .brand-logo img.brand-title {
+    filter: none
+}
+
+[data-nav-headerbg="color_1"] .nav-header .brand-logo img.brand-title {
+    filter: invert(1)
+}
+
+[data-nav-headerbg="color_1"][data-theme-version="dark"] .nav-header .brand-logo img.brand-title {
+    filter: none
+}
